@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#2c3e50"/>
+  
+  <!-- Red accent line -->
+  <rect x="40" y="80" width="10" height="300" fill="#e74c3c"/>
+  
+  <!-- Main Title -->
+  <text x="80" y="150" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#ffffff">
+    EMERGENCY
+  </text>
+  <text x="80" y="210" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#ffffff">
+    PRESENTATION
+  </text>
+  <text x="80" y="270" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#ffffff">
+    SERVICE
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="80" y="320" font-family="Arial, sans-serif" font-size="24" fill="#ecf0f1">
+    Professional slides delivered in 4 hours. Guaranteed.
+  </text>
+  
+  <!-- Decorative Elements - Clock Icon -->
+  <circle cx="650" cy="200" r="80" fill="none" stroke="#e74c3c" stroke-width="10"/>
+  <line x1="650" y1="200" x2="650" y2="150" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  <line x1="650" y1="200" x2="690" y2="200" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Bottom line with contact -->
+  <text x="400" y="410" font-family="Arial, sans-serif" font-size="16" fill="#ecf0f1" text-anchor="middle">
+    When your deadline can't wait. Fast. Professional. Reliable.
+  </text>
+</svg>

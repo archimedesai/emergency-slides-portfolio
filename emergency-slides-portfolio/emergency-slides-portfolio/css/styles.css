@@ -1,0 +1,337 @@
+/* Main Styles for Emergency Presentation Service Portfolio */
+
+:root {
+    --primary: #e74c3c;
+    --secondary: #3498db;
+    --dark: #2c3e50;
+    --light: #ecf0f1;
+    --success: #2ecc71;
+    --warning: #f39c12;
+    --danger: #e74c3c;
+    --info: #3498db;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header styles */
+header {
+    background-color: var(--dark);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Portfolio section */
+.portfolio {
+    padding: 60px 0;
+}
+
+.portfolio h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.portfolio > .container > p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #666;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+.portfolio-item h3 {
+    padding: 15px;
+    background-color: var(--dark);
+    color: white;
+    text-align: center;
+}
+
+.slide-container {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.slide-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item p {
+    padding: 15px;
+    text-align: center;
+    color: #666;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    overflow: auto;
+}
+
+.modal-content {
+    position: relative;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    animation: modalopen 0.3s;
+}
+
+@keyframes modalopen {
+    from {opacity: 0; transform: scale(0.8);}
+    to {opacity: 1; transform: scale(1);}
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close-button:hover {
+    color: var(--primary);
+}
+
+#modalImage {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Call to action section */
+.cta {
+    background-color: var(--dark);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: 15px;
+}
+
+.cta p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+.pricing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* FIXED: Pricing Card Styles with Proper "MOST POPULAR" Positioning */
+.price-item {
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+    padding: 30px;
+    width: 250px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    margin-top: 15px; /* Added to ensure space for the badge */
+}
+
+.price-item:hover {
+    transform: scale(1.05);
+}
+
+.price-item h3 {
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.price-item .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.price-item p {
+    margin-bottom: 10px;
+    opacity: 1;
+}
+
+.price-item.featured {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border-top: 4px solid var(--primary);
+    z-index: 1;
+}
+
+.price-item.featured:hover {
+    transform: scale(1.1);
+}
+
+.most-popular {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    white-space: nowrap;
+    z-index: 2;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p {
+    opacity: 0.7;
+}
+
+/* Additional slides section */
+.additional-slides {
+    margin-top: 40px;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.additional-slides h3 {
+    text-align: center;
+    color: var(--dark);
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.additional-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.additional-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.additional-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.additional-item h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.additional-item p {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .price-item, .price-item.featured {
+        width: 100%;
+        max-width: 350px;
+        transform: none;
+        margin-bottom: 30px;
+    }
+    
+    .price-item.featured {
+        order: -1;
+    }
+}

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#2c3e50"/>
+  
+  <!-- Header Area -->
+  <rect x="0" y="0" width="800" height="80" fill="#34495e"/>
+  <text x="40" y="50" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff">
+    WHY CHOOSE OUR EMERGENCY SERVICE?
+  </text>
+  
+  <!-- Benefit Icons and Text -->
+  <!-- Benefit 1: Speed -->
+  <circle cx="130" cy="150" r="40" fill="#e74c3c"/>
+  <text x="130" y="160" font-family="Arial, sans-serif" font-size="30" fill="#ffffff" text-anchor="middle">⚡</text>
+  <text x="130" y="220" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    SPEED
+  </text>
+  <text x="130" y="250" font-family="Arial, sans-serif" font-size="14" fill="#ecf0f1" text-anchor="middle" width="180">
+    Delivered in 4 hours
+  </text>
+  <text x="130" y="270" font-family="Arial, sans-serif" font-size="14" fill="#ecf0f1" text-anchor="middle" width="180">
+    guaranteed
+  </text>
+  
+  <!-- Benefit 2: Quality -->
+  <circle cx="290" cy="150" r="40" fill="#3498db"/>
+  <text x="290" y="160" font-family="Arial, sans-serif" font-size="30" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="290" y="220" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    QUALITY
+  </text>
+  <text x="290" y="250" font-family="Arial, sans-serif" font-size="14" fill="#ecf0f1" text-anchor="middle" width="180">
+    Professional design
+  </text>
+  <text x="290" y="270" font-family="Arial, sans-serif" font-size="14" fill="#ecf0f1" text-anchor="middle" width="180">
+    standards
+  </text>
+  
+  <!-- Benefit 3: Simplicity -->
+  <circle cx="450" cy="150" r="40" fill="#2ecc71"/>
+  <text x="450" y="160" font-family="Arial, sans-serif" font-size="30" fill="#ffffff" text-anchor="middle">☰</text>
+  <text x="450" y="220" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    SIMPLICITY
+  </text>
+  <text x="450" y="250" font-family="Arial, sans-serif" font-size="14" fill="#ecf0f1" text-anchor="middle" width="180">
+    Streamlined process
+  </text>
+  <text x="450" y="270" font-family="Arial, sans-serif" font-size="14" fill="#ecf0f1" text-anchor="middle" width="180">
+    from start to finish
+  </text>
+  
+  <!-- Benefit 4: Guarantee -->
+  <circle cx="610" cy="150" r="40" fill="#f39c12"/>
+  <text x="610" y="160" font-family="Arial, sans-serif" font-size="30" fill="#ffffff" text-anchor="middle">⟳</text>
+  <text x="610" y="220" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    GUARANTEE
+  </text>
+  <text x="610" y="250" font-family="Arial, sans-serif" font-size="14" fill="#ecf0f1" text-anchor="middle" width="180">
+    Money back if not
+  </text>
+  <text x="610" y="270" font-family="Arial, sans-serif" font-size="14" fill="#ecf0f1" text-anchor="middle" width="180">
+    delivered on time
+  </text>
+  
+  <!-- Process Timeline -->
+  <rect x="90" y="320" width="620" height="5" fill="#34495e"/>
+  
+  <!-- Process Steps -->
+  <circle cx="150" cy="320" r="15" fill="#e74c3c"/>
+  <text x="150" y="350" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">
+    Step 1
+  </text>
+  <text x="150" y="370" font-family="Arial, sans-serif" font-size="12" fill="#ecf0f1" text-anchor="middle">
+    15min consultation
+  </text>
+  
+  <circle cx="300" cy="320" r="15" fill="#e74c3c"/>
+  <text x="300" y="350" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">
+    Step 2
+  </text>
+  <text x="300" y="370" font-family="Arial, sans-serif" font-size="12" fill="#ecf0f1" text-anchor="middle">
+    Slide creation
+  </text>
+  
+  <circle cx="450" cy="320" r="15" fill="#e74c3c"/>
+  <text x="450" y="350" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">
+    Step 3
+  </text>
+  <text x="450" y="370" font-family="Arial, sans-serif" font-size="12" fill="#ecf0f1" text-anchor="middle">
+    Review &amp; revisions
+  </text>
+  
+  <circle cx="600" cy="320" r="15" fill="#e74c3c"/>
+  <text x="600" y="350" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">
+    Step 4
+  </text>
+  <text x="600" y="370" font-family="Arial, sans-serif" font-size="12" fill="#ecf0f1" text-anchor="middle">
+    Delivery
+  </text>
+  
+  <!-- Call to Action -->
+  <rect x="250" y="400" width="300" height="40" rx="20" ry="20" fill="#e74c3c"/>
+  <text x="400" y="425" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    START YOUR EMERGENCY PROJECT NOW
+  </text>
+</svg>
