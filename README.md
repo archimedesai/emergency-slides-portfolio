@@ -79,7 +79,7 @@ For urgent presentation needs, contact us immediately with "URGENT PRESENTATION"
 
 ## 💰 Payment
 
-We accept payment via PayPal, Venmo, or other secure methods upon agreement of terms.
+We accept payment via Zelle, PayPal, or Venmo, upon agreement of terms.
 
 ---
 
