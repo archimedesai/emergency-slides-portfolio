@@ -66,12 +66,12 @@ emergency-slides-portfolio/
 ## 🔍 Slide Capabilities
 
 We can create a wide range of slide types including:
-- Data Visualization
-- Problem/Solution Framework
-- Case Study Results
-- Executive Summary
-- Market Analysis 
-- Call to Action
+- **Data Visualization** - Turn complex numbers into compelling visual insights
+- **Problem/Solution Framework** - Clearly articulate challenges and your innovative solutions
+- **Case Study Results** - Showcase success metrics and tangible outcomes
+- **Executive Summary** - Distill complex concepts into actionable takeaways
+- **Market Analysis** - Visualize industry trends and competitive landscape
+- **Call to Action** - Compelling closing slides that drive next steps
 
 ## 📱 Contact
 
@@ -79,7 +79,7 @@ For urgent presentation needs, contact us immediately with "URGENT PRESENTATION"
 
 ## 💰 Payment
 
-We accept payment via Zelle, PayPal, or Venmo, upon agreement of terms.
+We accept payment via PayPal, Venmo, or other secure methods upon agreement of terms.
 
 ---
 
