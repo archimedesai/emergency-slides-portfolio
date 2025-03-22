@@ -5,6 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency Presentation Service - Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Bootstrap CSS for the new portfolio section -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Styles for portfolio slide previews */
+        .portfolio-item {
+            cursor: pointer;
+        }
+        .slide-hover-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 5px;
+        }
+        .slide-thumbnail {
+            position: relative;
+        }
+        .slide-thumbnail:hover .slide-hover-overlay {
+            opacity: 1;
+        }
+        .view-slide-btn {
+            background-color: #dc3545;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        /* Fix for original portfolio items */
+        .portfolio-grid .slide-container {
+            position: relative;
+        }
+        .portfolio-grid .slide-container::after {
+            content: "Click to Enlarge";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .portfolio-grid .slide-container:hover::after {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,7 +78,7 @@
             <p>Below are samples of our emergency presentation slides, designed to demonstrate the professional quality we deliver within our 4-hour timeframe.</p>
             
             <div class="portfolio-grid">
-                <div class="portfolio-item" data-slide="slides/title-slide.svg">
+                <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#slideModal" data-slide="slides/title-slide.svg">
                     <h3>Executive Pitch Opening</h3>
                     <div class="slide-container">
                         <img src="slides/title-slide.svg" alt="Executive Pitch Opening Slide">
@@ -28,7 +86,7 @@
                     <p>Attention-grabbing opener for high-stakes presentations</p>
                 </div>
                 
-                <div class="portfolio-item" data-slide="slides/service-overview-slide.svg">
+                <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#slideModal" data-slide="slides/service-overview-slide.svg">
                     <h3>Sales Comparison Matrix</h3>
                     <div class="slide-container">
                         <img src="slides/service-overview-slide.svg" alt="Sales Comparison Matrix Slide">
@@ -36,7 +94,7 @@
                     <p>Visualize competitive advantages against alternatives</p>
                 </div>
                 
-                <div class="portfolio-item" data-slide="slides/benefits-slide.svg">
+                <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#slideModal" data-slide="slides/benefits-slide.svg">
                     <h3>Key Benefits &amp; Timeline</h3>
                     <div class="slide-container">
                         <img src="slides/benefits-slide.svg" alt="Key Benefits and Timeline Slide">
@@ -45,43 +103,129 @@
                 </div>
             </div>
             
-            <!-- Description of additional slide types we can create -->
-            <div class="additional-slides">
-                <h3>Additional slide types we excel at creating:</h3>
-                <div class="additional-grid">
-                    <div class="additional-item">
-                        <h4>Data Visualization</h4>
-                        <p>Turn complex numbers into compelling visual insights</p>
+            <!-- Additional Slide Types Section -->
+            <section id="additional-slide-types" class="py-5 bg-light">
+              <div class="container">
+                <h2 class="text-center mb-5">Additional slide types we excel at creating:</h2>
+                
+                <div class="row">
+                  <!-- Data Visualization -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100 slide-preview-card" data-bs-toggle="modal" data-bs-target="#slideModal" data-slide="slides/data-visualization-slide.svg">
+                      <div class="card-body text-center">
+                        <h3 class="card-title text-danger">Data Visualization</h3>
+                        <p class="card-text">Turn complex numbers into compelling visual insights</p>
+                        <div class="slide-thumbnail">
+                          <img src="slides/data-visualization-slide.svg" alt="Data Visualization Slide" class="img-fluid rounded shadow-sm">
+                          <div class="slide-hover-overlay">
+                            <span class="view-slide-btn">View Slide</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="additional-item">
-                        <h4>Problem/Solution Framework</h4>
-                        <p>Clearly articulate challenges and your innovative solutions</p>
+                  </div>
+                  
+                  <!-- Problem/Solution Framework -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100 slide-preview-card" data-bs-toggle="modal" data-bs-target="#slideModal" data-slide="slides/problem-solution-slide.svg">
+                      <div class="card-body text-center">
+                        <h3 class="card-title text-danger">Problem/Solution Framework</h3>
+                        <p class="card-text">Clearly articulate challenges and your innovative solutions</p>
+                        <div class="slide-thumbnail">
+                          <img src="slides/problem-solution-slide.svg" alt="Problem/Solution Slide" class="img-fluid rounded shadow-sm">
+                          <div class="slide-hover-overlay">
+                            <span class="view-slide-btn">View Slide</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="additional-item">
-                        <h4>Case Study Results</h4>
-                        <p>Showcase success metrics and tangible outcomes</p>
+                  </div>
+                  
+                  <!-- Case Study Results -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100 slide-preview-card" data-bs-toggle="modal" data-bs-target="#slideModal" data-slide="slides/case-study-slide.svg">
+                      <div class="card-body text-center">
+                        <h3 class="card-title text-danger">Case Study Results</h3>
+                        <p class="card-text">Showcase success metrics and tangible outcomes</p>
+                        <div class="slide-thumbnail">
+                          <img src="slides/case-study-slide.svg" alt="Case Study Slide" class="img-fluid rounded shadow-sm">
+                          <div class="slide-hover-overlay">
+                            <span class="view-slide-btn">View Slide</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="additional-item">
-                        <h4>Executive Summary</h4>
-                        <p>Distill complex concepts into actionable takeaways</p>
+                  </div>
+                  
+                  <!-- Executive Summary -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100 slide-preview-card" data-bs-toggle="modal" data-bs-target="#slideModal" data-slide="slides/executive-summary-slide.svg">
+                      <div class="card-body text-center">
+                        <h3 class="card-title text-danger">Executive Summary</h3>
+                        <p class="card-text">Distill complex concepts into actionable takeaways</p>
+                        <div class="slide-thumbnail">
+                          <img src="slides/executive-summary-slide.svg" alt="Executive Summary Slide" class="img-fluid rounded shadow-sm">
+                          <div class="slide-hover-overlay">
+                            <span class="view-slide-btn">View Slide</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="additional-item">
-                        <h4>Market Analysis</h4>
-                        <p>Visualize industry trends and competitive landscape</p>
+                  </div>
+                  
+                  <!-- Market Analysis -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100 slide-preview-card" data-bs-toggle="modal" data-bs-target="#slideModal" data-slide="slides/market-analysis-slide.svg">
+                      <div class="card-body text-center">
+                        <h3 class="card-title text-danger">Market Analysis</h3>
+                        <p class="card-text">Visualize industry trends and competitive landscape</p>
+                        <div class="slide-thumbnail">
+                          <img src="slides/market-analysis-slide.svg" alt="Market Analysis Slide" class="img-fluid rounded shadow-sm">
+                          <div class="slide-hover-overlay">
+                            <span class="view-slide-btn">View Slide</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="additional-item">
-                        <h4>Call to Action</h4>
-                        <p>Compelling closing slides that drive next steps</p>
+                  </div>
+                  
+                  <!-- Call to Action -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100 slide-preview-card" data-bs-toggle="modal" data-bs-target="#slideModal" data-slide="slides/call-to-action-slide.svg">
+                      <div class="card-body text-center">
+                        <h3 class="card-title text-danger">Call to Action</h3>
+                        <p class="card-text">Compelling closing slides that drive next steps</p>
+                        <div class="slide-thumbnail">
+                          <img src="slides/call-to-action-slide.svg" alt="Call to Action Slide" class="img-fluid rounded shadow-sm">
+                          <div class="slide-hover-overlay">
+                            <span class="view-slide-btn">View Slide</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </div>
-            
-            <!-- Modal for enlarged slides -->
-            <div id="slideModal" class="modal">
+              </div>
+            </section>
+
+            <!-- Slide Preview Modal -->
+            <div class="modal fade" id="slideModal" tabindex="-1" aria-labelledby="slideModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
                 <div class="modal-content">
-                    <span class="close-button">&times;</span>
-                    <img id="modalImage" src="" alt="Enlarged slide">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="slideModalLabel">Slide Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-center">
+                    <div id="slide-preview-container">
+                      <!-- Slide content will be loaded here via JavaScript -->
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
                 </div>
+              </div>
             </div>
         </div>
     </section>
@@ -123,6 +267,96 @@
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Original Script -->
     <script src="js/main.js"></script>
+    
+    <!-- Updated Script for all slide previews -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Handle slide preview modal for all slides
+        const slideModal = document.getElementById('slideModal');
+        const slidePreviewContainer = document.getElementById('slide-preview-container');
+        
+        slideModal.addEventListener('show.bs.modal', function(event) {
+          const button = event.relatedTarget;
+          let slideFile;
+          let slideTitle;
+          
+          // Check if this is from the top portfolio section or bottom section
+          if (button.classList.contains('slide-preview-card')) {
+            slideFile = button.getAttribute('data-slide');
+            slideTitle = button.querySelector('.card-title').innerText;
+          } else if (button.classList.contains('portfolio-item')) {
+            slideFile = button.getAttribute('data-slide');
+            slideTitle = button.querySelector('h3').innerText;
+          } else {
+            // For clicks directly on thumbnail containers
+            slideFile = button.closest('[data-slide]').getAttribute('data-slide');
+            slideTitle = button.closest('.portfolio-item, .slide-preview-card').querySelector('h3, .card-title').innerText;
+          }
+          
+          // Update modal title
+          document.getElementById('slideModalLabel').innerText = slideTitle + ' Example';
+          
+          // Load SVG content
+          fetch(slideFile)
+            .then(response => response.text())
+            .then(svgContent => {
+              slidePreviewContainer.innerHTML = svgContent;
+            })
+            .catch(error => {
+              slidePreviewContainer.innerHTML = '<div class="alert alert-danger">Error loading slide preview: ' + slideFile + '</div>';
+              console.error('Error loading slide:', error);
+            });
+        });
+        
+        // Clear modal content when closed
+        slideModal.addEventListener('hidden.bs.modal', function() {
+          slidePreviewContainer.innerHTML = '';
+        });
+      });
+    </script>
+    
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
 </body>
 </html>

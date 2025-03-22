@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background with subtle texture pattern -->
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#fcfcfc"/>
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#f5f5f5" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#grid)"/>
+  
+  <!-- Side accent bar -->
+  <rect x="0" y="0" width="30" height="600" fill="#0d47a1"/>
+  
+  <!-- Header -->
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#0d47a1">Executive Summary</text>
+  <text x="60" y="100" font-family="Arial, sans-serif" font-size="18" fill="#546e7a">Distill complex concepts into actionable takeaways</text>
+  <line x1="60" y1="120" x2="740" y2="120" stroke="#e0e0e0" stroke-width="2"/>
+  
+  <!-- Content boxes with shadow effect -->
+  <defs>
+    <filter id="shadow" x="-2" y="-2" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Situation box -->
+  <g transform="translate(60, 150)">
+    <rect width="680" height="100" rx="4" ry="4" fill="white" filter="url(#shadow)"/>
+    <text x="20" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0d47a1">Situation</text>
+    <line x1="20" y1="40" x2="100" y2="40" stroke="#0d47a1" stroke-width="3"/>
+    <text x="20" y="65" font-family="Arial, sans-serif" font-size="14" fill="#424242">GloboTech's market share has declined 8% over the past year due to increased competition</text>
+    <text x="20" y="85" font-family="Arial, sans-serif" font-size="14" fill="#424242">and shifting consumer preferences toward integrated technology solutions.</text>
+  </g>
+  
+  <!-- Key Findings box -->
+  <g transform="translate(60, 270)">
+    <rect width="680" height="130" rx="4" ry="4" fill="white" filter="url(#shadow)"/>
+    <text x="20" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0d47a1">Key Findings</text>
+    <line x1="20" y1="40" x2="120" y2="40" stroke="#0d47a1" stroke-width="3"/>
+    
+    <!-- Key finding bullets -->
+    <circle cx="25" cy="65" r="4" fill="#0d47a1"/>
+    <text x="40" y="70" font-family="Arial, sans-serif" font-size="14" fill="#424242">Customer satisfaction scores dropped 15% with major concerns around integration.</text>
+    
+    <circle cx="25" cy="95" r="4" fill="#0d47a1"/>
+    <text x="40" y="100" font-family="Arial, sans-serif" font-size="14" fill="#424242">Competitor analysis reveals 3 key product features GloboTech currently lacks.</text>
+    
+    <circle cx="25" cy="125" r="4" fill="#0d47a1"/>
+    <text x="40" y="130" font-family="Arial, sans-serif" font-size="14" fill="#424242">Market research indicates 72% of customers prefer unified platforms over standalone tools.</text>
+  </g>
+  
+  <!-- Recommendations box -->
+  <g transform="translate(60, 420)">
+    <rect width="680" height="130" rx="4" ry="4" fill="white" filter="url(#shadow)"/>
+    <text x="20" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0d47a1">Recommendations</text>
+    <line x1="20" y1="40" x2="155" y2="40" stroke="#0d47a1" stroke-width="3"/>
+    
+    <!-- Key recommendations -->
+    <rect x="25" y="60" width="20" height="20" rx="2" ry="2" fill="#e3f2fd" stroke="#0d47a1" stroke-width="1"/>
+    <text x="33" y="75" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0d47a1">1</text>
+    <text x="55" y="75" font-family="Arial, sans-serif" font-size="14" fill="#424242">Develop integrated platform solution within 3 months (details on slide 8).</text>
+    
+    <rect x="25" y="90" width="20" height="20" rx="2" ry="2" fill="#e3f2fd" stroke="#0d47a1" stroke-width="1"/>
+    <text x="33" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0d47a1">2</text>
+    <text x="55" y="105" font-family="Arial, sans-serif" font-size="14" fill="#424242">Launch customer upgrade program with 25% loyalty discount (details on slide 12).</text>
+    
+    <rect x="25" y="120" width="20" height="20" rx="2" ry="2" fill="#e3f2fd" stroke="#0d47a1" stroke-width="1"/>
+    <text x="33" y="135" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0d47a1">3</text>
+    <text x="55" y="135" font-family="Arial, sans-serif" font-size="14" fill="#424242">Implement competitive feature parity by Q3 2025 (timeline on slide 15).</text>
+  </g>
+  
+  <!-- Footer with logo reference -->
+  <text x="60" y="580" font-family="Arial, sans-serif" font-size="12" fill="#9e9e9e">Emergency Presentation Service</text>
+  <text x="710" y="580" font-family="Arial, sans-serif" font-size="12" fill="#9e9e9e">1</text>
+</svg>

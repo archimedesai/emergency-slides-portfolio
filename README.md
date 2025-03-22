@@ -56,11 +56,28 @@ emergency-slides-portfolio/
 │   └── styles.css        # Styling for the portfolio
 ├── js/
 │   └── main.js           # JavaScript functionality
-├── assets/               # Additional assets
+├── assets/
+│   └── thumbnail-placeholder.png  # Placeholder for thumbnails
 └── slides/               # SVG slide examples
-    ├── title-slide.svg
+    ├── title-slide.svg           # Original portfolio examples
     ├── service-overview-slide.svg
-    └── benefits-slide.svg
+    ├── benefits-slide.svg
+    ├── data-visualization-slide.svg   # Added slide types
+    ├── problem-solution-slide.svg
+    ├── case-study-slide.svg
+    ├── executive-summary-slide.svg
+    ├── market-analysis-slide.svg
+    └── call-to-action-slide.svg
+```
+
+To view your current folder structure, run this command in your terminal:
+
+```bash
+# For Windows PowerShell
+dir -Recurse | Where-Object { !$_.PSIsContainer } | ForEach-Object { $_.FullName.Substring($PWD.Path.Length + 1) }
+
+# For macOS/Linux
+find . -type f | sort
 ```
 
 ## 🔍 Slide Capabilities
