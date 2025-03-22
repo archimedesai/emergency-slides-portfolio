@@ -62,20 +62,174 @@
         .portfolio-grid .slide-container:hover::after {
             opacity: 1;
         }
+        
+        /* Emergency Contact Form Styles */
+        .contact-section {
+          background-color: #f8f9fa;
+          padding: 50px 0;
+          border-top: 5px solid #e74c3c;
+        }
+        
+        .contact-section .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+        
+        .urgent-message {
+          font-size: 18px;
+          margin-bottom: 30px;
+        }
+        
+        .highlight {
+          background-color: #e74c3c;
+          color: white;
+          padding: 2px 5px;
+          font-weight: bold;
+        }
+        
+        #emergency-form {
+          background: white;
+          padding: 30px;
+          border-radius: 8px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+          margin-bottom: 20px;
+        }
+        
+        .form-group label {
+          display: block;
+          margin-bottom: 8px;
+          font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          font-size: 16px;
+        }
+        
+        .package-options {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 15px;
+          margin-top: 10px;
+        }
+        
+        .package {
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          padding: 15px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        
+        .package:hover {
+          border-color: #e74c3c;
+        }
+        
+        .package input[type="radio"] {
+          width: auto;
+          margin-right: 10px;
+        }
+        
+        .package label {
+          cursor: pointer;
+          display: block;
+          font-weight: normal;
+        }
+        
+        .package p {
+          margin: 5px 0 0;
+          font-size: 14px;
+          color: #666;
+        }
+        
+        .checkbox-group {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        
+        .checkbox-group input {
+          width: auto;
+        }
+        
+        .checkbox-group label {
+          display: inline;
+          margin: 0;
+        }
+        
+        .btn-emergency {
+          background-color: #e74c3c;
+          color: white;
+          border: none;
+          padding: 15px 25px;
+          font-size: 18px;
+          font-weight: bold;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          width: 100%;
+        }
+        
+        .btn-emergency:hover {
+          background-color: #c0392b;
+        }
+        
+        .guarantee {
+          margin-top: 30px;
+          padding: 20px;
+          background-color: #f1f1f1;
+          border-left: 5px solid #e74c3c;
+        }
+        
+        .guarantee p {
+          margin: 10px 0;
+        }
+        
+        /* Footer styles */
+        .footer-links {
+          margin-top: 10px;
+          font-size: 14px;
+        }
+        
+        .footer-links a {
+          color: #666;
+          text-decoration: none;
+          transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+          color: #e74c3c;
+          text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+          .package-options {
+            grid-template-columns: 1fr;
+          }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <h1>Emergency Presentation Service</h1>
-            <p>Professional slides delivered in 4 hours. Guaranteed.</p>
+            <p>Professional slides delivered in 24-48 hours. Guaranteed.</p>
         </div>
     </header>
 
     <section class="portfolio">
         <div class="container">
             <h2>Portfolio Samples</h2>
-            <p>Below are samples of our emergency presentation slides, designed to demonstrate the professional quality we deliver within our 4-hour timeframe.</p>
+            <p>Below are samples of our emergency presentation slides, designed to demonstrate the professional quality we deliver within our 24-48 hour timeframe.</p>
             
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#slideModal" data-slide="slides/title-slide.svg">
@@ -233,20 +387,20 @@
     <section class="cta">
         <div class="container">
             <h2>Need an emergency presentation?</h2>
-            <p>Contact us now to get started. Professional slides delivered in 4 hours or your money back.</p>
+            <p>Contact us now to get started. Professional slides delivered in 24-48 hours or your money back.</p>
             <div class="pricing">
                 <div class="price-item">
                     <h3>Basic</h3>
                     <p class="price">$300</p>
                     <p>5-10 slides</p>
-                    <p>4-hour delivery</p>
+                    <p>24-hour delivery</p>
                     <p>1 revision</p>
                 </div>
                 <div class="price-item featured">
                     <h3>Standard</h3>
                     <p class="price">$400</p>
                     <p>11-20 slides</p>
-                    <p>4-hour delivery</p>
+                    <p>36-hour delivery</p>
                     <p>2 revisions</p>
                     <div class="most-popular">MOST POPULAR</div>
                 </div>
@@ -254,16 +408,119 @@
                     <h3>Premium</h3>
                     <p class="price">$500</p>
                     <p>21-30 slides</p>
-                    <p>4-hour delivery</p>
+                    <p>48-hour delivery</p>
                     <p>Unlimited revisions</p>
                 </div>
             </div>
         </div>
     </section>
 
+<!-- Emergency Contact Form Section -->
+<section id="emergency-contact" class="contact-section">
+  <div class="container">
+    <h2>Need Emergency Presentation Help?</h2>
+    <p class="urgent-message">Complete this form and I'll respond in <span class="highlight">30 MINUTES OR LESS</span> during business hours!</p>
+    
+    <form id="emergency-form" action="https://formspree.io/f/mrbpqejb" method="POST">
+      <!-- Honeypot field to prevent spam -->
+      <div class="form-group" style="display:none;">
+        <label for="website">Website (Do not fill this out if you're human)</label>
+        <input type="text" name="_honey" id="website" tabindex="-1" autocomplete="off">
+      </div>
+      
+      <div class="form-group">
+        <label for="name">Your Name*</label>
+        <input type="text" name="name" id="name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Your Email*</label>
+        <input type="email" name="email" id="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="phone">Phone Number (for urgent communication)</label>
+        <input type="tel" name="phone" id="phone">
+      </div>
+      
+      <div class="form-group">
+        <label for="deadline">When do you need the presentation?*</label>
+        <input type="text" name="deadline" id="deadline" placeholder="e.g., 'Today at 5pm EST'" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="slides">Approximate number of slides needed:</label>
+        <select name="slides" id="slides">
+          <option value="5-10">5-10 slides ($300)</option>
+          <option value="11-20" selected>11-20 slides ($400)</option>
+          <option value="21-30">21-30 slides ($500)</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="details">Brief details about your presentation:*</label>
+        <textarea name="details" id="details" rows="4" placeholder="What's the presentation about? Who's the audience? Any specific requirements?" required></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="package">Select Package:</label>
+        <div class="package-options">
+          <div class="package">
+            <input type="radio" name="package" id="basic" value="Basic">
+            <label for="basic">
+              <strong>Basic Package ($300)</strong>
+              <p>Professional slides delivered in 24 hours</p>
+            </label>
+          </div>
+          
+          <div class="package">
+            <input type="radio" name="package" id="standard" value="Standard" checked>
+            <label for="standard">
+              <strong>Standard Package ($400)</strong>
+              <p>Slides + Presenter's Guide delivered in 36 hours</p>
+            </label>
+          </div>
+          
+          <div class="package">
+            <input type="radio" name="package" id="premium" value="Premium">
+            <label for="premium">
+              <strong>Premium Package ($500)</strong>
+              <p>Slides + complete suite of support documents in 48 hours</p>
+            </label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-group checkbox-group">
+        <input type="checkbox" name="agree" id="agree" required>
+        <label for="agree">I understand this is an emergency service with premium pricing</label>
+      </div>
+      
+      <div class="form-group checkbox-group">
+        <input type="checkbox" name="terms_agree" id="terms_agree" required>
+        <label for="terms_agree">I have read and agree to the <a href="terms.html" target="_blank">Terms of Service</a>, <a href="privacy.html" target="_blank">Privacy Policy</a>, <a href="requirements.html" target="_blank">Project Requirements</a>, and <a href="confidentiality.html" target="_blank">Confidentiality Policy</a></label>
+      </div>
+      
+      <button type="submit" class="btn-emergency">SEND EMERGENCY REQUEST</button>
+    </form>
+    
+    <div class="guarantee">
+      <p>⚡ <strong>RESPONSE GUARANTEE:</strong> I will respond to your emergency request within 30 minutes during business hours.</p>
+      <p>⚡ <strong>DELIVERY GUARANTEE:</strong> Your presentation will be delivered within the guaranteed timeframe (24-48 hours depending on package) or your money back.</p>
+    </div>
+  </div>
+</section>
+
+
     <footer>
         <div class="container">
             <p>&copy; 2025 Emergency Presentation Service. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="terms.html">Terms of Service</a> | 
+                <a href="privacy.html">Privacy Policy</a> | 
+                <a href="requirements.html">Project Requirements</a> | 
+                <a href="confidentiality.html">Confidentiality Policy</a>
+            </div>
         </div>
     </footer>
 
@@ -320,43 +577,83 @@
       });
     </script>
     
-    <!-- Code injected by live-server -->
+    <!-- Contact Form Functionality -->
     <script>
-        // <![CDATA[  <-- For SVG support
-        if ('WebSocket' in window) {
-            (function () {
-                function refreshCSS() {
-                    var sheets = [].slice.call(document.getElementsByTagName("link"));
-                    var head = document.getElementsByTagName("head")[0];
-                    for (var i = 0; i < sheets.length; ++i) {
-                        var elem = sheets[i];
-                        var parent = elem.parentElement || head;
-                        parent.removeChild(elem);
-                        var rel = elem.rel;
-                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-                        }
-                        parent.appendChild(elem);
-                    }
-                }
-                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-                var address = protocol + window.location.host + window.location.pathname + '/ws';
-                var socket = new WebSocket(address);
-                socket.onmessage = function (msg) {
-                    if (msg.data == 'reload') window.location.reload();
-                    else if (msg.data == 'refreshcss') refreshCSS();
-                };
-                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-                    console.log('Live reload enabled.');
-                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-                }
-            })();
+      document.addEventListener('DOMContentLoaded', function() {
+        // Handle package selection
+        const packages = document.querySelectorAll('.package');
+        
+        packages.forEach(function(pkg) {
+          const radio = pkg.querySelector('input[type="radio"]');
+          
+          // Initial check for pre-selected option
+          if(radio.checked) {
+            pkg.style.backgroundColor = '#fff8f8';
+            pkg.style.borderColor = '#e74c3c';
+          }
+          
+          // Change on click
+          pkg.addEventListener('click', function() {
+            // Reset all packages
+            packages.forEach(function(p) {
+              p.style.backgroundColor = 'white';
+              p.style.borderColor = '#ddd';
+            });
+            
+            // Select clicked package
+            radio.checked = true;
+            pkg.style.backgroundColor = '#fff8f8';
+            pkg.style.borderColor = '#e74c3c';
+          });
+        });
+        
+        // Form submission handling
+        const emergencyForm = document.getElementById('emergency-form');
+        if (emergencyForm) {
+          emergencyForm.addEventListener('submit', function(e) {
+            // You might want to add form validation here
+            
+            // Show loading state on button
+            const submitButton = emergencyForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.innerHTML = 'Sending...';
+            submitButton.disabled = true;
+            
+            // If using Formspree, you don't need to prevent default
+            // But if you want to add custom behavior, you could do:
+            // e.preventDefault();
+            
+            // You could add a success message display here
+            // This timeout simulates the form submission for demo purposes
+            // Remove this in production and rely on formspree redirect
+            setTimeout(function() {
+              submitButton.innerHTML = originalButtonText;
+              submitButton.disabled = false;
+            }, 2000);
+          });
         }
-        else {
-            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        
+        // Update package selection when slides dropdown changes
+        const slidesSelect = document.getElementById('slides');
+        if (slidesSelect) {
+          slidesSelect.addEventListener('change', function() {
+            const value = this.value;
+            let packageId = 'standard'; // Default
+            
+            if (value === '5-10') {
+              packageId = 'basic';
+            } else if (value === '21-30') {
+              packageId = 'premium';
+            }
+            
+            // Select the appropriate package radio
+            const packageRadio = document.getElementById(packageId);
+            if (packageRadio) {
+              packageRadio.click();
+            }
+          });
         }
-        // ]]>
+      });
     </script>
 </body>
 </html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Emergency Presentation Service</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding-top: 2rem;
+            padding-bottom: 4rem;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            font-weight: bold;
+        }
+        h2 {
+            color: #e74c3c;
+            margin-top: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #e74c3c;
+            border-color: #e74c3c;
+            padding: 10px 25px;
+            font-weight: bold;
+        }
+        .btn-primary:hover {
+            background-color: #c0392b;
+            border-color: #c0392b;
+        }
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Emergency Presentation Service</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <p>Have a question or need assistance? Fill out the form below and we'll get back to you as soon as possible.</p>
+                    
+                    <form action="https://formspree.io/f/xvgkazjp" method="POST">
+                        <!-- Honeypot field to prevent spam -->
+                        <div class="form-group" style="display:none;">
+                            <label for="website">Website (Do not fill this out if you're human)</label>
+                            <input type="text" name="_honey" id="website" tabindex="-1" autocomplete="off">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name*</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address*</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject*</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message*</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="privacy-agree" name="privacy-agree" required>
+                            <label class="form-check-label" for="privacy-agree">I have read and agree to the <a href="privacy.html" target="_blank">Privacy Policy</a></label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    
+                    <p><strong>Business Hours:</strong><br>
+                    Monday - Friday: 9:00 AM - 6:00 PM Eastern Time
+                    </p>
+                    
+                    <p><strong>Response Time:</strong><br>
+                    We respond to all inquiries within 30 minutes during business hours.
+                    </p>
+                </div>
+                
+                <div class="emergency-info">
+                    <h2>Need an Emergency Presentation?</h2>
+                    <p>If you have an urgent presentation need, please use our <a href="index.html#emergency-contact">Emergency Presentation Request Form</a> for guaranteed 24-48 hour delivery.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="back-link text-center mt-4">
+            <a href="index.html" class="btn btn-secondary">Back to Home</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 Emergency Presentation Service. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="terms.html">Terms of Service</a> | 
+                    <a href="privacy.html">Privacy Policy</a> | 
+                    <a href="requirements.html">Project Requirements</a> | 
+                    <a href="confidentiality.html">Confidentiality Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
